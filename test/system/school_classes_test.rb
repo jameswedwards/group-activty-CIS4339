@@ -14,8 +14,8 @@ class SchoolClassesTest < ApplicationSystemTestCase
     visit school_classes_url
     click_on "New School Class"
 
+    fill_in "Class number", with: @school_class.class_number
     fill_in "Name", with: @school_class.name
-    fill_in "Section number", with: @school_class.section_number
     click_on "Create School class"
 
     assert_text "School class was successfully created"
@@ -26,8 +26,8 @@ class SchoolClassesTest < ApplicationSystemTestCase
     visit school_classes_url
     click_on "Edit", match: :first
 
+    fill_in "Class number", with: @school_class.class_number
     fill_in "Name", with: @school_class.name
-    fill_in "Section number", with: @school_class.section_number
     click_on "Update School class"
 
     assert_text "School class was successfully updated"
