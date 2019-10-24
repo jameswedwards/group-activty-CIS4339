@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Class Assignments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Assignment name</th>
+      <th>Due date</th>
+      <th>Points</th>
+      <th>School class</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @class_assignments.each do |class_assignment| %>
+      <tr>
+        <td><%= class_assignment.assignment_name %></td>
+        <td><%= class_assignment.due_date %></td>
+        <td><%= class_assignment.points %></td>
+        <td><%= class_assignment.school_class_id %></td>
+        <td><%= link_to 'Show', class_assignment %></td>
+        <td><%= link_to 'Edit', edit_class_assignment_path(class_assignment) %></td>
+        <td><%= link_to 'Destroy', class_assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Class Assignment', new_class_assignment_path %>
