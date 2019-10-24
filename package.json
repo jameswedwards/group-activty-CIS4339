@@ -1,5 +1,6 @@
 {
   "name": "group_project_CIS4339",
+
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0-alpha",
